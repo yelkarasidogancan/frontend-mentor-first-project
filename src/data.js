@@ -52,3 +52,29 @@ export const portfolio = {
     },
   ],
 };
+export const about = {
+  title: "ABOUT",
+  subtitle:
+    "Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional SASS stylesheets for easy customization.",
+  subtitleSecond:
+    "You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to the contact form to make it fully functional!",
+  buttonText: "Free Download!",
+};
+
+export const contactMe = {
+  title: "CONTACT ME",
+  formName: "Full name",
+  formEmail: "Email address",
+  formPhone: "Phone number",
+  formMessage: "Message",
+  buttonText: "Send",
+};
+export const footer = {
+  titleFirst: "LOCATION",
+  address: "2215 John Daniel Drive",
+  addressSecond: "Clark, MO 65243",
+  titleSecond: "AROUND THE WEB",
+  titleThird: "ABOUT FREELANCER",
+  licence: "Freelance is a free to use,MIT licensed Bootstrap theme created by",
+  a: "Start Bootstrap",
+};

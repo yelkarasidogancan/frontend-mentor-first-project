@@ -21,6 +21,7 @@ module.exports = {
     extend: {
       colors: {
         primary: "rgba(44, 62, 80)",
+        bgcolor: "#2c3e50",
         secondary: "#4B5D68",
         accent: {
           primary: "rgna(44, 62, 80)",
