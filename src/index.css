@@ -7,3 +7,8 @@
 body {
   font-family: "Montserrat", sans-serif;
 }
+.active {
+  background: rgba(26, 188, 156);
+  padding: 20px 10px;
+  border-radius: 15px;
+}

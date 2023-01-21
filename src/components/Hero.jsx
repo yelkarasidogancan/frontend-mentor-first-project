@@ -7,14 +7,13 @@ import { MdOutlineMaximize } from "react-icons/md";
 
 const Hero = () => {
   const { title, subtitle } = hero;
-  const [showModal, setShowModal] = React.useState(false);
   return (
-    <section className="bg-blue-400 py-20 ">
+    <section className="bg-blue-400 pt-[200px] pb-[100px]">
       <div className="container mx-auto text-center">
         {/* {First Image} */}
-        <img className="mx-auto mb-10 w-[250px]  " src={firstImage} alt="" />
+        <img className="mx-auto mb-10 w-[230px]  " src={firstImage} alt="" />
         {/* {h1Text} */}
-        <h1 className="text-5xl lg:text-8xl font-bold text-white mb-10">
+        <h1 className="text-5xl lg:text-6xl font-bold text-white mb-10">
           {title}
         </h1>
         {/* {Second Image} */}
@@ -24,7 +23,7 @@ const Hero = () => {
           <MdOutlineMaximize size={150} color="white" />
         </div>
         {/* {h2 Text} */}
-        <h2 className="text-xl lg:text-3xl font-medium  text-white ">
+        <h2 className="text-lg lg:text-xl font-medium  text-white ">
           {subtitle}
         </h2>
       </div>

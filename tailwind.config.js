@@ -20,6 +20,7 @@ module.exports = {
     },
     extend: {
       colors: {
+        bgprimary: "rgba(26, 188, 156)",
         primary: "rgba(44, 62, 80)",
         bgcolor: "#2c3e50",
         secondary: "#4B5D68",

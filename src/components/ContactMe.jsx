@@ -7,9 +7,9 @@ const ContactMe = () => {
   const { title, formName, formEmail, formPhone, formMessage, buttonText } =
     contactMe;
   return (
-    <section className="py-10">
+    <section id="Contact" className="py-10 pt-[100px]">
       <div className="container mx-auto text-primary">
-        <h1 className="text-4xl lg:text-8xl font-bold  mb-10 text-center">
+        <h1 className="text-4xl lg:text-5xl  font-bold  mb-10 text-center">
           {title}
         </h1>
         {/* {Second Image} */}
@@ -20,7 +20,7 @@ const ContactMe = () => {
         </div>
       </div>
       {/* {form} */}
-      <div class="w-full mx-auto px-10">
+      <div class="w-full mx-auto px-10 max-w-[600px] md:max-w-[700px]">
         <div class=" space-y-10 text-gray-700 sm:text-lg sm:leading-7">
           <div class="relative">
             <input
@@ -90,7 +90,7 @@ const ContactMe = () => {
           </div>
         </div>
         <div class="relative">
-          <button class="bg-blue-400 text-white rounded-md px-7 py-5 mt-2">
+          <button class="bg-blue-400 text-white rounded-md px-7 py-5 mt-2 mb-[50px]">
             Send
           </button>
         </div>

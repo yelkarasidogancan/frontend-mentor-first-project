@@ -12,11 +12,11 @@ const Portfolio = () => {
   const [modalData, setModalData] = useState(null);
   const { title, items } = portfolio;
   return (
-    <section>
+    <section id="Portfolio">
       <div className="pt-20 mx-auto container">
         <div className="  text-center ">
           {/* {title} */}
-          <h1 className="text-6xl lg:text-8xl font-bold text-primary mb-10">
+          <h1 className="text-4xl lg:text-5xl font-bold text-primary mb-10">
             {title}
           </h1>
           {/* {Star Icon} */}

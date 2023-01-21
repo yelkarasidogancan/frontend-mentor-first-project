@@ -18,14 +18,14 @@ const Footer = () => {
     a,
   } = footer;
   return (
-    <div className="h-screen bg-bgcolor  ">
-      <div className="flex flex-col items-center py-20">
-        <div className="flex flex-col text-center p-5">
+    <div className=" bg-bgcolor  ">
+      <div className="flex flex-col lg:flex-row   justify-center mx-auto py-10">
+        <div className="flex flex-col text-center p-5 lg:w-[350px] xl:w-[400px] md:w-[800px]">
           <h1 className="text-white text-2xl font-bold p-4 ">{titleFirst}</h1>
           <p className="text-white text-lg">{address}</p>
           <p className="text-white text-lg">{addressSecond}</p>
         </div>
-        <div className="flex flex-col text-center p-5">
+        <div className="flex flex-col text-center p-5 lg:w-[350px] xl:w-[400px] md:w-[800px]">
           <h1 className="text-white text-2xl font-bold p-4">{titleSecond}</h1>
           <div className="flex items-center justify-center gap-x-2">
             {/* {icons} */}
@@ -43,7 +43,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col text-center p-5">
+        <div className="flex flex-col text-center p-5 lg:w-[350px] xl:w-[400px] md:w-[800px]">
           <h1 className="text-white text-2xl font-bold p-4">{titleThird}</h1>
           <p className="text-white text-lg px-5">
             {licence}{" "}
