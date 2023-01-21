@@ -78,43 +78,25 @@ const Navbar = () => {
         >
           {(ref) => (
             <div className="md:hidden" id="mobile-menu">
-              <div
-                ref={ref}
-                className="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col my-2 gap-y-3"
-              >
-                <Link
-                  to="Portfolio"
-                  spy={true}
-                  smooth={true}
-                  offset={50}
-                  duration={500}
-                  className="font-bold text-md text-white uppercase hover:text-bgprimary transition-all cursor-pointer  "
-                >
-                  Portfolio
-                </Link>
-
-                <Link
-                  to="About"
-                  spy={true}
-                  smooth={true}
-                  offset={50}
-                  duration={500}
-                  className="font-bold text-md text-white uppercase hover:text-bgprimary transition-all cursor-pointer "
-                >
-                  About
-                </Link>
-
-                <Link
-                  to="Contact"
-                  spy={true}
-                  smooth={true}
-                  offset={50}
-                  duration={500}
-                  className="font-bold text-md text-white uppercase hover:text-bgprimary transition-all cursor-pointer "
-                >
-                  Contact
-                </Link>
-              </div>
+              {navigationData.map((item, index) => {
+                return (
+                  <div
+                    ref={ref}
+                    className="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col my-2 gap-y-3"
+                  >
+                    <Link
+                      to={item.name}
+                      spy={true}
+                      smooth={true}
+                      offset={50}
+                      duration={500}
+                      className="font-bold text-md text-white uppercase hover:text-bgprimary transition-all cursor-pointer  "
+                    >
+                      {item.name}
+                    </Link>
+                  </div>
+                );
+              })}
             </div>
           )}
         </Transition>
