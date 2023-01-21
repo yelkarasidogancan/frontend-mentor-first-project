@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { CgMenuRight, CgClose } from "react-icons/cg";
-
+import { Transition } from "@headlessui/react";
+import { BiMenu } from "react-icons/bi";
 import { Link } from "react-scroll";
 import { navigationData } from "../data";
 
 const Navbar = () => {
   const [bg, setBg] = useState(false);
-  const [mobileNav, setMobileNav] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -17,7 +18,7 @@ const Navbar = () => {
     <header
       className={`${
         bg ? "bg-bgcolor py-4 lg:py-6" : "bg-bgcolor"
-      } fixed sm:px[15px] lg:px-[50px] w-full py-5 lg:py-9  z-10 transition-all duration-300`}
+      } fixed sm:px[15px] lg:px-[50px] w-full py-5   z-10 transition-all duration-300`}
     >
       <div className="container mx-auto">
         <div className="flex justify-between items-center">
@@ -26,12 +27,22 @@ const Navbar = () => {
             START BOOTSTRAP
           </h1>
           {/* {menu icon} */}
-          <div
-            // onClick={() => setMobileNav(!mobileNav)}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
             className="text-2xl text-white lg:hidden lg:text-3xl cursor-pointer"
           >
-            {mobileNav ? <CgClose /> : <CgMenuRight />}
-          </div>
+            {!isOpen ? (
+              <button className=" flex items-center text-sm bg-bgprimary py-[10px] px-[15px] rounded-lg">
+                <p>Menu</p>
+                <BiMenu />
+              </button>
+            ) : (
+              <button className=" flex items-center text-sm bg-bgprimary py-[10px] px-[15px] rounded-lg focus:border-2 border-b-white">
+                <p>Menu</p>
+                <BiMenu />
+              </button>
+            )}
+          </button>
           {/* {nav} */}
           <nav className="hidden lg:flex">
             <ul className="pr-5 md:flex md:gap-x-10">
@@ -55,12 +66,58 @@ const Navbar = () => {
             </ul>
           </nav>
           {/* {nav mobile} */}
-          <div
-            className={`${
-              mobileNav ? "left-0" : "-left-full"
-            } md:hidden fixed bottom-0 w-full max-w-xs h-screen transition-all`}
-          ></div>
         </div>
+        <Transition
+          show={isOpen}
+          enter="transition ease-out duration-100 transform"
+          enterFrom="opacity-0 scale-95"
+          enterTo="opacity-100 scale-100"
+          leave="transition ease-in duration-75 transform"
+          leaveFrom="opacity-100 scale-100"
+          leaveTo="opacity-0 scale-95"
+        >
+          {(ref) => (
+            <div className="md:hidden" id="mobile-menu">
+              <div
+                ref={ref}
+                className="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col my-2 gap-y-3"
+              >
+                <Link
+                  to="Portfolio"
+                  spy={true}
+                  smooth={true}
+                  offset={50}
+                  duration={500}
+                  className="font-bold text-md text-white uppercase hover:text-bgprimary transition-all cursor-pointer  "
+                >
+                  Portfolio
+                </Link>
+
+                <Link
+                  to="About"
+                  spy={true}
+                  smooth={true}
+                  offset={50}
+                  duration={500}
+                  className="font-bold text-md text-white uppercase hover:text-bgprimary transition-all cursor-pointer "
+                >
+                  About
+                </Link>
+
+                <Link
+                  to="Contact"
+                  spy={true}
+                  smooth={true}
+                  offset={50}
+                  duration={500}
+                  className="font-bold text-md text-white uppercase hover:text-bgprimary transition-all cursor-pointer "
+                >
+                  Contact
+                </Link>
+              </div>
+            </div>
+          )}
+        </Transition>
       </div>
     </header>
   );

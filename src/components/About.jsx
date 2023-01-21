@@ -27,10 +27,13 @@ const About = () => {
         </div>
         <div className="flex justify-center">
           <button className="mb-[100px] border-2 text-white text-lg font-medium border-b-white py-4 px-7 rounded-lg hover:bg-white hover:text-primary transition ">
-            <div className="flex items-center ">
+            <a
+              href="https://startbootstrap.com/theme/freelancer"
+              className="flex items-center "
+            >
               <FaDownload className="mr-2" />
               {buttonText}
-            </div>
+            </a>
           </button>
         </div>
       </div>
