@@ -5,21 +5,12 @@ import { BiMenu } from "react-icons/bi";
 import { Link } from "react-scroll";
 import { navigationData } from "../data";
 
-const Navbar = () => {
+const Nav = () => {
   const [bg, setBg] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      return window.scrollY > 50 ? setBg(true) : setBg(false);
-    });
-  });
   return (
-    <header
-      className={`${
-        bg ? "bg-bgcolor py-4 lg:py-6" : "bg-bgcolor"
-      } fixed sm:px[15px] lg:px-[50px] w-full py-5 z-0 transition-all duration-300`}
-    >
+    <header className="bg-bgcolor fixed sm:px[15px] lg:px-[50px] w-full py-5 z-0 transition-all duration-300">
       <div className="container mx-auto">
         <div className="flex justify-between items-center">
           {/* {logo} */}
@@ -105,4 +96,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Nav;
