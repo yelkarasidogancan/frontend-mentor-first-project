@@ -7,6 +7,7 @@ import Hero from "./components/Hero";
 import Nav from "./components/Nav";
 import Navbar from "./components/Navbar";
 import Portfolio from "./components/Portfolio";
+import Portfolios from "./components/Portfolios";
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
       {/* <Nav /> */}
       <Navbar />
       <Hero />
-      <Portfolio />
+      <Portfolios />
       <About />
       <ContactMe />
       <Footer />

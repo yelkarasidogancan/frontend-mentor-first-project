@@ -27,26 +27,32 @@ export const portfolio = {
   title: "PORTFOLIO",
   items: [
     {
+      id: 1,
       text: "Cabin",
       image: <Cabin />,
     },
     {
+      id: 2,
       text: "Cake",
       image: <Cake />,
     },
     {
+      id: 3,
       text: "Circus",
       image: <Circus />,
     },
     {
+      id: 4,
       text: "Game",
       image: <Game />,
     },
     {
+      id: 5,
       text: "Safe",
       image: <Safe />,
     },
     {
+      id: 6,
       text: "Submarine",
       image: <Submarine />,
     },

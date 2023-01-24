@@ -17,7 +17,7 @@ const Navbar = () => {
   return (
     <header
       className={`${
-        bg ? "bg-bgcolor py-4 lg:py-6" : "bg-bgcolor"
+        bg ? "bg-bgcolor py-4 lg:py-6 z-10" : "bg-bgcolor"
       } fixed sm:px[15px] lg:px-[50px] w-full py-5 z-0 transition-all duration-300`}
     >
       <div className="container mx-auto">
